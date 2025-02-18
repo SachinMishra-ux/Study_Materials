@@ -36,7 +36,7 @@ def plot_matrices(W, A, B, delta_W, W_updated, quantized_W=None):
     """Plots the weight matrices to visualize LoRA and QLoRA effects."""
     fig, axes = plt.subplots(1, 6 if quantized_W is not None else 5, figsize=(20, 4))
     matrices = [W, A, B, delta_W, W_updated]
-    titles = ["Original Weights (W)", "A (d×r)", "B (r×d)", "ΔW = A × B", "Updated Weights (W')"]
+    titles = ["Original Weights (W)", "A (d×r)", "B (r×d)", "ΔW = A × B", "Updated Weights (W')= W + ΔW"]
     
     if quantized_W is not None:
         matrices.insert(1, quantized_W)
